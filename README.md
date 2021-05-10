@@ -1,4 +1,5 @@
 # SPECcast
+NOTE: SPECcast has been improved and replaced by BenchCast. It now includes applications other than SPEC CPU 2017 along with other features. Please, refer to the [BenchCast repository](https://github.com/prietop/BenchCast).
 SPECcast is a performance evaluation tool that uses profiling ([PAPI](https://icl.utk.edu/papi/)) and synchronization mechanisms to overcome limitations of current alternatives. SPECcast is able to generate huge amount of multiprogrammed workloads from SPEC, executing their Region Of Interest (ROI) simultaneously. Therefore it can provide high number of measures in a short amount of time, and thanks to PAPI, it is not limited to execution time or IPC. SPECcast is intended to be used on real hardware and/or Full System simulations tools (like [gem5](https://www.gem5.org/)). 
 
 ## Announcements
@@ -75,9 +76,9 @@ cd <SPEC2017_folder>
 ```
 ### Options
 
-  Usage: spec_cast [-b] [-w] [-p number] [-n number] [-l number] "
-        "[-c config_name] [-v csv_filename] [-s seconds] [-r number]"
-        "--\<prog\> [number] [--\<prog2\> [number] --\<prog3\> [number]...]
+  Usage: spec_cast [-b] [-w] [-p number] [-n number] [-l number] 
+        [-c config_name] [-v csv_filename] [-s seconds] [-r number]
+        --\<prog\> [number] [--\<prog2\> [number] --\<prog3\> [number]...]
   * **prog** is the program/s you want to cast. Some programs require an aditional param to indicate the benchmark number among all available for that prog (check LAUNCH_CMKS.py to see the benchmarks available for each prog).
   * **-b** makes spec_cast to return immediately after launching the programs. The default is to wait for them to finish (Not recommended).
   * **-p** is the number of processors you want to use from the system (default value: the number of available processors in the system.
@@ -98,5 +99,5 @@ If you use this tool in your research, please cite the following paper:
 *P. Prieto, P. Abad, J.A. Herrero, J.A. Gregorio, V. Puente, "SPECcast: A Methodology for Fast Performance Evaluation with SPEC CPU 2017 Multiprogrammed Workloads" in ICPP 2020 - 49th International Conference on Parallel Processing, 2020*
 
 ## Disclaimer
-SPECcast is currently under development, so future improvements and modifications are spected. If you have any problems, please send an e-mail to prietop@unican.es.
+SPECcast has been replaced by [BenchCast](https://github.com/prietop/BenchCast) and further improvements will be released in the BenchCast repository. If you have any problems, please send an e-mail to prietop@unican.es.
 At the current version, SPECcast has been tested on Linux and x86-64 systems.
